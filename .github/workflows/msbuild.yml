@@ -46,7 +46,7 @@ jobs:
       - name: Upload Artifact without ABOVE_S20
         uses: actions/upload-artifact@v4
         with:
-          name: Reboot
+          name: Reboot-${{ inputs.branch }}
           path: ${{ env.SOLUTION_FILE_PATH }}/x64/${{ env.BUILD_CONFIGURATION }}
           if-no-files-found: warn
           retention-days: 90
@@ -58,7 +58,7 @@ jobs:
       - name: Upload Artifact with ABOVE_S20
         uses: actions/upload-artifact@v4
         with:
-          name: RebootS20
+          name: RebootS20-${{ inputs.branch }}
           path: ${{ env.SOLUTION_FILE_PATH }}/x64/${{ env.BUILD_CONFIGURATION }}
           if-no-files-found: warn
           retention-days: 90
