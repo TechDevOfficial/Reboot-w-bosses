@@ -306,8 +306,8 @@ void AFortGameModeAthena::OnAircraftEnteredDropZoneHook(AFortGameModeAthena* Gam
 void SetupEverythingAI() // find better name lol
 {
 	PlayerBot::InitializeBotClasses();
-	// SetupAIGoalManager();
-	// SetupAIDirector();
+	SetupAIGoalManager();
+	SetupAIDirector();
 	SetupServerBotManager();
 	// SetupNavConfig(UKismetStringLibrary::Conv_StringToName(L"MANG"));
 }
